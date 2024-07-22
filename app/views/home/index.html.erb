@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center justify-content-center">
+    <h1>Welcome To Scheduled Tweets</h1>
+</div>
+    <% if user_signed_in? %>
+      <%= link_to "Edit Password", edit_user_password_path, class: "btn btn-secondary" %>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+    <% else %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-success" %>
+    <% end %>
+    <% if @user %>
+        Logged in as: <%= @user.email %>
+    <% end %>
+
+<%= link_to "Connect Twitter", "auth/twitter", method: :post, class: "btn btn-primary" %>

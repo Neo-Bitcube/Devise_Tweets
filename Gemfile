@@ -57,3 +57,7 @@ group :test do
 end
 
 gem "devise"
+gem "omniauth"
+gem "omniauth-twitter2"
+gem "omniauth-oauth2"
+gem "omniauth-rails_csrf_protection"
