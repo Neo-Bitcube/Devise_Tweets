@@ -12,4 +12,4 @@
         Logged in as: <%= @user.email %>
     <% end %>
 
-<%= link_to "Connect Twitter", "auth/twitter", method: :post, class: "btn btn-primary" %>
+<%= button_to "Connect Twitter",  user_twitter2_omniauth_authorize_path, method: :post, data: {turbo: "false"}, class: "btn btn-primary" %>

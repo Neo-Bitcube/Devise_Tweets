@@ -271,8 +271,8 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :twitter2, Rails.application.credentials.dig(:twitter, :twitter_client_id), Rails.application.credentials.dig(:twitter, :twitter_client_secret),
-        callback_path: "users/auth/twitter/callback", scope: "tweet.read tweet.write users.read"
+  config.omniauth :twitter2, Rails.application.credentials.dig(:twitter, :client_id), Rails.application.credentials.dig(:twitter, :client_secret),
+        callback_path: "/users/auth/twitter2/callback", scope: "tweet.read tweet.write users.read offline.access"
 
 
   # ==> Warden configuration
